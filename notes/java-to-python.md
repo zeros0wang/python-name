@@ -202,3 +202,65 @@ System.out.println(profile.get("role"));
 - 学会了 `list.append()` 和 `for` 遍历。
 - 学会了通过 `dict` 的 key 读取 value。
 - 建立了 Python 基础类型与 Java 常用类型之间的对应关系。
+
+## Day 03
+
+### 函数与 Java 方法
+
+Java 中常见方法：
+
+```java
+public String buildGreeting(String name) {
+    return "你好，" + name + "！";
+}
+```
+
+Python 中对应写法：
+
+```python
+def build_greeting(name: str) -> str:
+    return f"你好，{name}！"
+```
+
+Python 使用 `def` 定义函数，使用缩进表示函数体。`name: str` 和 `-> str` 是类型提示，帮助 IDE 和阅读者理解代码，但运行时不会像 Java 编译器那样强制检查。
+
+### 返回值
+
+没有显式 `return` 的函数会返回 `None`，可以类比 Java 的 `void`，但 Python 里的 `None` 是一个真实的值。
+
+```python
+def print_message(message: str) -> None:
+    print(message)
+```
+
+### 默认参数
+
+Python 没有 Java 那种方法重载。常见替代方式之一是默认参数：
+
+```python
+def build_greeting(name: str, prefix: str = "你好") -> str:
+    return f"{prefix}，{name}！"
+```
+
+调用时可以省略默认参数：
+
+```python
+print(build_greeting("Felix"))
+print(build_greeting("Felix", "欢迎"))
+```
+
+### 命名风格
+
+Python 函数名通常使用 `snake_case`：
+
+```python
+build_greeting()
+calculate_total()
+```
+
+Java 方法名通常使用 `camelCase`：
+
+```java
+buildGreeting()
+calculateTotal()
+```

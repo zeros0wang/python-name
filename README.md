@@ -2,6 +2,10 @@
 
 这是一个面向 Java 开发工程师的 Python 与 Agent 开发学习项目。
 
+## 学习路线图
+
+先看总览：[Python 到 Agent 开发学习路线图](docs/learning-roadmap.md)。
+
 ## 第 1 天
 
 目标：完成第一个交互式 Python 程序，建立本地 Python 3.12 开发环境。
@@ -82,3 +86,22 @@ Python
 Agent
 Java 开发工程师
 ```
+
+## 第 3 天
+
+目标：掌握 Python 函数、参数、返回值，并能用 Java method 的经验理解函数设计。
+
+运行练习：
+
+```bash
+.venv/bin/python src/day03/functions_practice.py
+```
+
+当天完成标准：
+
+- 能定义无返回值函数，并在 `main()` 中调用。
+- 能定义带参数的函数。
+- 能定义带返回值的函数，并接收返回结果。
+- 能写类型提示，例如 `name: str`、`-> str`。
+- 能理解 Python 函数没有方法重载，默认参数可以覆盖一部分重载场景。
+- 能把一段重复逻辑抽成函数。
