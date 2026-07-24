@@ -1,0 +1,12 @@
+.venv/
+.uv-cache/
+.uv-python/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/python学习.iml
+/.idea/vcs.xml
