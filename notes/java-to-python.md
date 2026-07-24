@@ -264,3 +264,96 @@ Java 方法名通常使用 `camelCase`：
 buildGreeting()
 calculateTotal()
 ```
+
+## Day 04
+
+### 条件判断
+
+Python 的多分支判断使用 `if` / `elif` / `else`：
+
+```python
+def get_score_level(score: int) -> str:
+    if score >= 90:
+        return "优秀"
+    elif score >= 60:
+        return "及格"
+    else:
+        return "不及格"
+```
+
+Java 中对应的是：
+
+```java
+if (score >= 90) {
+    return "优秀";
+} else if (score >= 60) {
+    return "及格";
+} else {
+    return "不及格";
+}
+```
+
+注意 Python 使用 `elif`，不是 Java 的 `else if`。
+
+### range
+
+`range()` 常用于控制循环次数：
+
+```python
+for index in range(3):
+    print(index)
+```
+
+输出是 `0`、`1`、`2`，不包含结束值 `3`。这点类似 Java 中的：
+
+```java
+for (int index = 0; index < 3; index++) {
+    System.out.println(index);
+}
+```
+
+### 遍历 list
+
+Python 通常直接遍历元素：
+
+```python
+skills = ["Java", "Python", "Agent"]
+
+for skill in skills:
+    print(skill)
+```
+
+如果确实需要下标，可以使用 `enumerate()`：
+
+```python
+for index, skill in enumerate(skills):
+    print(index, skill)
+```
+
+### 遍历 dict
+
+遍历 key-value 使用 `.items()`：
+
+```python
+profile = {"name": "felix", "role": "Java 开发工程师"}
+
+for key, value in profile.items():
+    print(key, value)
+```
+
+这可以类比 Java 遍历 `Map.entrySet()`。
+
+### break 与 continue
+
+`break` 用于提前结束循环，`continue` 用于跳过当前这一次循环：
+
+```python
+for skill in skills:
+    if skill == "Python":
+        continue
+    if skill == "Agent":
+        break
+    print(skill)
+```
+
+在 Agent 开发中，这类控制流经常用于处理消息列表、筛选工具、过滤检索结果。
