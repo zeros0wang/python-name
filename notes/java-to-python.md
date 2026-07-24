@@ -91,3 +91,114 @@ else:
 - 完成了第一个可运行的 Python 脚本。
 - 学会了 `import`、`print()`、`input()`、`.strip()`、`if/else`、f-string。
 - 理解了 Python 入口函数写法与 Java `main` 方法的关系。
+
+## Day 02
+
+### 基础类型对比
+
+| Python | Java 近似理解 | 说明 |
+| --- | --- | --- |
+| `str` | `String` | 字符串 |
+| `int` | `int` / `long` / `BigInteger` | Python 整数不需要手动区分大小范围 |
+| `float` | `double` | 浮点数 |
+| `bool` | `boolean` | 取值是 `True` / `False`，首字母大写 |
+| `list` | `ArrayList` | 有序、可变集合 |
+| `dict` | `Map` / `HashMap` | key-value 映射 |
+
+### 动态类型
+
+Python 不需要在变量声明处写类型：
+
+```python
+age = 33
+```
+
+这不表示 Python 没有类型，而是变量名会绑定到对象，对象本身有明确类型：
+
+```python
+print(type(age))
+```
+
+同一个变量名可以重新绑定到不同类型的对象：
+
+```python
+num = "30"
+num = int(num)
+num = str(num)
+```
+
+这种写法能运行，但在真实业务代码里要克制使用。一个变量在一段逻辑中尽量保持含义和类型稳定，可读性会好很多。
+
+### 类型转换
+
+常见转换函数：
+
+```python
+age_text = "30"
+age = int(age_text)
+message = str(age)
+height = float("171.55")
+```
+
+可以类比 Java 中的 `Integer.parseInt()`、`String.valueOf()`、`Double.parseDouble()`。
+
+### list
+
+Python 的 `list` 可以类比 Java `ArrayList`：
+
+```python
+skills = ["Java", "Python"]
+skills.append("Agent")
+
+for skill in skills:
+    print(skill)
+```
+
+对应 Java 视角：
+
+```java
+List<String> skills = new ArrayList<>();
+skills.add("Java");
+skills.add("Python");
+skills.add("Agent");
+
+for (String skill : skills) {
+    System.out.println(skill);
+}
+```
+
+Python 的 `for skill in skills` 更接近 Java 增强 for 循环，而不是传统下标循环。
+
+### dict
+
+Python 的 `dict` 可以类比 Java `Map` / `HashMap`：
+
+```python
+profile = {
+    "name": "felix",
+    "role": "Java 开发工程师",
+    "learning_day": 2,
+}
+
+print(profile["role"])
+```
+
+对应 Java 视角：
+
+```java
+Map<String, Object> profile = new HashMap<>();
+profile.put("name", "felix");
+profile.put("role", "Java 开发工程师");
+profile.put("learning_day", 2);
+
+System.out.println(profile.get("role"));
+```
+
+### Day 02 收获
+
+- 掌握了 `str`、`int`、`float`、`bool`、`list`、`dict`。
+- 学会了使用 `type()` 查看变量类型。
+- 学会了使用 `int()`、`str()`、`float()` 做基础类型转换。
+- 学会了 `list.append()` 和 `for` 遍历。
+- 学会了通过 `dict` 的 key 读取 value。
+- 建立了 Python 基础类型与 Java 常用类型之间的对应关系。
